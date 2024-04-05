@@ -9,13 +9,14 @@ In our data, we have the same username appear multiple times. Multiple entries f
 #### Random Sample (9GB)
 
 * [Data Prep.](notebooks/1.0_data_prep.ipynb)
-* [Train](notebooks/2.0_train_9g.ipynb)
+* [Train](notebooks/2.0_train_9g.ipynb) and [model param. (.pt)](model/pass_predict_9g.pt)
 * Results
+	* [Generate Model Results](notebooks/3.0_results.ipynb)
 	* [Lookup Results](notebooks/3.2_results.ipynb)
-	* [Comparison to username, etc.](notebooks/3.0.1_graphs.ipynb)
+	* [Comparison to username and top 100 most common passwords.](notebooks/3.1_results.ipynb)
 	* [Comparison Between Model and Baselines](notebooks/3.2.1_compare.ipynb)
 
-Of the 10,000 randomly selected usernames, lookup only yields 1700 hits. On the usernames we are able to lookup,  the average min. edit distance over 100 tries from the model is 7.28 while for the lookup, it is 6.23. 
+We do a better job cracking 10,000 test set passwords using the top 100 most common passwords than the model (see [here](notebooks/3.1_results.ipynb)). Of the 10,000 randomly selected usernames, lookup only yields 1700 hits. On the usernames we are able to lookup,  the average min. edit distance over 100 tries from the model is 7.28 while for the lookup, it is 6.23. 
 
 #### Common Usernames
 
@@ -28,7 +29,7 @@ We randomly split the data into train and test and estimate a seq-to-seq model. 
 * Data Prep.
 	* [Prep. 1](notebooks/1.1_data_prep.ipynb)
 	* [Data Prep.](notebooks/1.2_data_prep.ipynb)
-* [Train](notebooks/2.1_train_top_100_1m.ipynb)
+* [Train](notebooks/2.1_train_top_100_1m.ipynb) and [model param. (.pt)](pass_predict_100_direct_mapping.pt)
 * [Results](notebooks/3.1_results.ipynb)
 
 ### Authors
